@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations - Fast-Food Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Fast-Food Delight</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="order.html" class="active">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Locations Section -->
+    <section class="locations-section">
+        <h1>Our Locations</h1>
+        
+     
+    
+
+        <div class="location-details">
+            <h2>Find the Nearest Location</h2>
+            <input type="text" id="search-input" placeholder="Enter your location">
+            <button id="search-btn">Search</button>
+        </div>
+    </section>
+
+    <!-- Locations List -->
+    <section class="locations-list">
+        <div class="location-card">
+            <h3>Downtown Branch</h3>
+            <p>Address: 123 Main St, Downtown City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Hours: Mon-Sun 10:00 AM - 10:00 PM</p>
+        </div>
+        <div class="location-card">
+            <h3>Uptown Branch</h3>
+            <p>Address: 456 High St, Uptown City</p>
+            <p>Phone: (123) 987-6543</p>
+            <p>Hours: Mon-Sun 9:00 AM - 11:00 PM</p>
+        </div>
+        <div class="location-card">
+            <h3>Suburb Branch</h3>
+            <p>Address: 789 Elm St, Suburb City</p>
+            <p>Phone: (123) 654-3210</p>
+            <p>Hours: Mon-Sun 11:00 AM - 9:00 PM</p>
+        </div>
+
+        
+    </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+               
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: contact@fastfooddelight.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4></h4>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Fast Food. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script href=>// Initialize Google Map and markers for restaurant locations
+        function initMap() {
+            const locations = [
+                { name: 'Downtown Branch', lat: 40.712776, lng: -74.005974 },
+                { name: 'Uptown Branch', lat: 40.730610, lng: -73.935242 },
+                { name: 'Suburb Branch', lat: 40.678178, lng: -73.944158 }
+            ];
+        
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 40.712776, lng: -74.005974 },
+                zoom: 12
+            });
+        
+            // Add markers to the map
+            locations.forEach(location => {
+                const marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.name
+                });
+            });
+        
+            // Search feature
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-btn');
+        
+            const geocoder = new google.maps.Geocoder();
+        
+            searchButton.addEventListener('click', () => {
+                const address = searchInput.value;
+                if (address) {
+                    geocoder.geocode({ address: address }, (results, status) => {
+                        if (status === 'OK') {
+                            map.setCenter(results[0].geometry.location);
+                            map.setZoom(14);
+                        } else {
+                            alert('Location not found: ' + status);
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Load the map when the page loads
+        window.onload = initMap;
+        </script>
+</body>
+</html>

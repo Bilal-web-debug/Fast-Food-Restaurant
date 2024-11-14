@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fast-Food Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Fast-Food Delight</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="order.html" class="active">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <p>
+                    Welcome to Fast-Food Delight, where delicious flavors meet a friendly atmosphere!
+                    Our journey began in 2005 with a simple mission: to serve the tastiest and freshest fast food 
+                    in town. Over the years, we have stayed true to our values of quality, flavor, and service excellence.
+                </p>
+                <p>
+                    Our values revolve around using high-quality ingredients, creating a fun and welcoming environment,
+                    and always putting our customers first. We believe in building a community where food is the bridge 
+                    to joy and togetherness.
+                </p>
+            </div>
+            <div class="about-images">
+                <img src="restaurant_interior.jpg" alt="Restaurant Interior">
+                <img src="food_preparation.jpg" alt="Food Preparation">
+                <img src="team.jpg" alt="Our Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="staff1.jpg" alt="John Doe - Chef">
+                <h3>John Doe</h3>
+                <p>Head Chef</p>
+                <p>John brings over 20 years of culinary experience to our kitchen, creating delicious and innovative dishes that delight our customers.</p>
+            </div>
+            <div class="team-member">
+                <img src="staff2.jpg" alt="Jane Smith - Manager">
+                <h3>Jane Smith</h3>
+                <p>Restaurant Manager</p>
+                <p>With a passion for customer service, Jane ensures every visitor enjoys a fantastic dining experience.</p>
+            </div>
+            <div class="team-member">
+                <img src="staff3.jpg" alt="Emily Brown - Waitress">
+                <h3>Emily Brown</h3>
+                <p>Customer Service Specialist</p>
+                <p>Emily's friendly smile and warm hospitality make every customer feel like family.</p>
+            </div>
+        </div>
+
+        
+    </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+               
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: contact@fastfooddelight.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4></h4>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Fast Food. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script >document.addEventListener('DOMContentLoaded', function () {
+        // Add simple hover effect to team members
+        const teamMembers = document.querySelectorAll('.team-member');
+    
+        teamMembers.forEach(member => {
+            member.addEventListener('mouseover', () => {
+                member.style.transform = 'scale(1.05)';
+                member.style.transition = 'transform 0.3s';
+            });
+    
+            member.addEventListener('mouseout', () => {
+                member.style.transform = 'scale(1)';
+            });
+        });
+    });
+    </script>
+</body>
+</html>

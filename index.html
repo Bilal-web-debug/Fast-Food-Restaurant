@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast-Food Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .hero {
+    background-image: url('slider.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    background-color: transparent; /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+    font-size: 3rem; /* Large font size for the title */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem; /* Medium font size for the description */
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    background-color: #ff5733; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.order-btn:hover {
+    background-color: #c70039; /* Darker shade on hover */
+}
+
+.testimonial {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    margin: 20px auto; /* Center the section */
+    max-width: 600px; /* Limit width */
+}
+
+.testimonial-container {
+    font-size: 1.2rem; /* Slightly larger font size */
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 1rem; /* Smaller font for the author */
+    color: #555; /* Dark gray color */
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Fast-Food Delight</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="order.html" class="active">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Delicious Fast Food, Anytime, Anywhere!</h1>
+            <p>Order your favorite meals with just one click.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+    <section class="featured-items">
+        <h2>Our Best-Selling Items</h2>
+        <div class="items-container">
+            <div class="item">
+                <img src="burger.jpg" alt="Juicy Burger">
+                <h3>Juicy Burger</h3>
+                <p>A classic beef burger loaded with toppings.</p>
+            </div>
+            <div class="item">
+                <img src="pizza.jpg" alt="Cheese Pizza">
+                <h3>Cheese Pizza</h3>
+                <p>A delightful pizza with lots of cheese.</p>
+            </div>
+            <div class="item">
+                <img src="fries.jpg" alt="Crispy Fries">
+                <h3>Crispy Fries</h3>
+                <p>Golden fries with a crispy touch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonial">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Best burger I've ever had! Highly recommend!"</p>
+                <span>- John Doe</span>
+            </div>
+            <div class="testimonial">
+                <p>"Fast delivery and delicious food. Will order again!"</p>
+                <span>- Jane Smith</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+               
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: contact@fastfooddelight.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4></h4>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Fast Food. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script >document.querySelector('.order-btn').addEventListener('click', function() {
+        window.location.href = 'order.html'; // Replace with your order page URL
+    });
+    </script>
+    <script href="script.js"></script>
+</body>
+</html>
